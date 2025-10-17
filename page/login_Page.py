@@ -22,9 +22,9 @@ class Login:
         
     def open(self):
         self.driver.get(URL)
-        time.sleep (10)
+        #time.sleep (10)
 
     def login(self, username=USERNAME, password=PASSWORD):
-        WebDriverWait(self.driver, 14).until(EC.element_to_be_clickable(self.IMPUT_USER_NAME)).send_keys(username)
+        WebDriverWait(self.driver, 4).until(EC.element_to_be_clickable(self.IMPUT_USER_NAME)).send_keys(username)
         WebDriverWait(self.driver, 4).until(EC.element_to_be_clickable(self.IMPUT_PASSWORD)).send_keys(password)
         WebDriverWait(self.driver, 4).until(EC.element_to_be_clickable(self.LOGINBUTTON)).click()

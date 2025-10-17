@@ -11,11 +11,10 @@ PASSWORD = "secret_sauce"
 
 
 def get_driver():
-
+    #driver = webdriver.Chrome()
     service = Service(ChromeDriverManager().install())
     driver = webdriver.Chrome(service=service)
 
 
     time.sleep(5)
-
     return driver
