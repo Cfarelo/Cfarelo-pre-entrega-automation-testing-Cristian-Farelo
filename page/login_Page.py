@@ -11,6 +11,8 @@ import os
 
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__),'..')))
 
+# Clase que encapsula funciones y credenciales para el login
+
 class Login:
     
     IMPUT_USER_NAME =(By.NAME, "user-name")

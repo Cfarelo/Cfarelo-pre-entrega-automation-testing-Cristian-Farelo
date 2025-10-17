@@ -2,6 +2,8 @@ from page.login_Page import Login
 from selenium.webdriver.common.by import By
 import time
 
+#test del catalogo de productos y el componente "filtros"
+
 def test_catalogo1(driver):
     nuevo_login = Login(driver)
     nuevo_login.open()

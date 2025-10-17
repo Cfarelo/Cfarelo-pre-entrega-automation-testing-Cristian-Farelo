@@ -2,6 +2,8 @@ from page.login_Page import Login
 from selenium.webdriver.common.by import By
 import time
 
+#test de login utilizando credenciales validas - verificacion de landing page y sus titulos principales
+
 def test_login1(driver):
     nuevo_login = Login(driver)
     nuevo_login.open()

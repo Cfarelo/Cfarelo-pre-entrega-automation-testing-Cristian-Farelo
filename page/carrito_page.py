@@ -11,12 +11,17 @@ import os
 
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__),'..')))
 
+# clase que encapsula funciones para el carrito
+
 class Carrito:
     
     IMPUT_USER_NAME =(By.NAME, "user-name")
     IMPUT_PASSWORD = (By.NAME, "password")
     LOGINBUTTON = (By.NAME, "login-button")
     CARRITO = (By.CLASS_NAME,"shopping_cart_link")
+    PRODUCTO1 = (By.ID, "add-to-cart-sauce-labs-backpack")
+    REMOVERPRODUCTO1 = (By.ID, "remove-sauce-labs-backpack")
+
 
     def __init__(self, driver):
         self.driver = driver
@@ -32,3 +37,9 @@ class Carrito:
 
     def navegar(self):
          WebDriverWait(self.driver, 4).until(EC.element_to_be_clickable(self.CARRITO)).click()
+
+    def agregarProducto1(self):
+        WebDriverWait(self.driver, 4).until(EC.element_to_be_clickable(self.PRODUCTO1)).click()
+       
+    def borrarProducto(self):
+        WebDriverWait(self.driver, 4).until(EC.element_to_be_clickable(self.REMOVERPRODUCTO1)).click()
