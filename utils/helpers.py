@@ -10,6 +10,7 @@ import time
 URL = "https://www.saucedemo.com"
 USERNAME = "standard_user"
 PASSWORD = "secret_sauce"
+                    
 
 def get_driver():
     #driver = webdriver.Chrome()
@@ -19,3 +20,6 @@ def get_driver():
 
     time.sleep(5)
     return driver
+
+
+    

@@ -16,7 +16,7 @@ class Login:
     IMPUT_USER_NAME =(By.NAME, "user-name")
     IMPUT_PASSWORD = (By.NAME, "password")
     LOGINBUTTON = (By.NAME, "login-button")
-
+    
     def __init__(self, driver):
         self.driver = driver
         
@@ -28,3 +28,8 @@ class Login:
         WebDriverWait(self.driver, 4).until(EC.element_to_be_clickable(self.IMPUT_USER_NAME)).send_keys(username)
         WebDriverWait(self.driver, 4).until(EC.element_to_be_clickable(self.IMPUT_PASSWORD)).send_keys(password)
         WebDriverWait(self.driver, 4).until(EC.element_to_be_clickable(self.LOGINBUTTON)).click()
+    
+        
+
+
+        
